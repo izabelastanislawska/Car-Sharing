@@ -1,0 +1,101 @@
+.header {
+    position: absolute;
+    width: 100%;
+    border: 2px solid $color-light-grey-opacity;
+    background-color: $color-black-opacity;  
+    z-index: 1; 
+    &-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__nav{
+        width: 50%;
+        @include tablet {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        font-size: $font-35;
+        font-weight: 700;
+        width: 50%;
+        @include mobile {
+            font-size: 2rem;
+        }
+    }
+    &__car {
+        color: $color-red;
+        font-size: $font-35;
+        padding: 2rem 1rem;
+        font-weight: 800;
+        @include mobile {
+            font-size: 2rem;
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include tablet {
+            display: none;
+        }
+        &-item {
+            display: inline;
+            width: 13rem;
+            height: 9rem;
+            padding: 3rem 2rem;
+            font-size: $font-16;
+            font-weight: 700;
+            text-align: center;
+            &:hover{
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+}
+@include tablet {
+    .hamburger div {
+        background-color: $color-white;
+        height: 0.5rem;
+        width: 4rem;
+        margin: 1rem;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: 0.2s linear;
+    }
+    #menu {
+        &:checked {
+            ~ .header__list {
+                display: block;
+                position: absolute;
+                top: 6rem;
+                left: 0;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: rgba(0, 0, 0, 0.9);
+            }
+            ~ .header {
+                background-color: rgba(0, 0, 0, 0.9);
+            }
+            ~ .hamburger div {
+                transform: rotate(45deg) translate(0, 21px);
+                transition: 0.2s linear;
+            }
+            ~ .hamburger div:nth-child(2) {
+                opacity: 0;
+                transform: rotate(0deg) scale(0.2, 0.2);
+            }
+            ~ .hamburger div:nth-child(3) {
+                transform: rotate(-45deg) translate(0, -21px);
+            }
+        }
+    }
+    .header {
+        border: none;
+    }
+}

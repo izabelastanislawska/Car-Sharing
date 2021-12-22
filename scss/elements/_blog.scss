@@ -1,0 +1,38 @@
+.blog {
+    &__wrapper {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include tablet {
+            flex-direction: column;
+            width: 80%;
+        }
+    }
+    &__tile {
+        margin-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 11rem;
+        @include tablet {
+            align-items: center;
+        }
+    }
+    &__photo {
+        width: 100%;
+        height: auto;
+    }
+    &__paragraph {
+        margin-right: 9rem;
+        color: $color-grey-blog;
+        @include tablet {
+            text-align: center;
+            margin-right: 0;
+        }
+    }
+    &__link {
+        margin-top: 1.5rem;
+        width: 14rem;
+    }
+}

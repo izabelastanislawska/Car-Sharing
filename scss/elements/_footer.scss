@@ -1,0 +1,31 @@
+.footer {
+    background-color: $color-dark-grey;
+    padding-bottom: 2rem;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__list {
+        flex-grow: 1;
+        &-item {
+            font-size: $font-14;
+            font-weight: 700;
+            @include mobile {
+                font-size: $font-12;
+            }
+        }
+    }
+    &__link {
+        &:hover {
+            color: $color-red;
+        }
+    }
+    &__span {
+        flex-grow: 2;
+        text-align: right;
+        align-self: flex-end;
+        color: $color-grey-input;
+        font-size: $font-12;
+        font-weight: 300;
+    }
+}

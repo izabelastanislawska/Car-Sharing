@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    width: 100%;
+    font-family: $font-nunito;
+}
+
+a {
+    text-decoration: none;
+    color: $color-white;
+}
+
+a, li, h1, h2, h3, button {
+    text-transform: uppercase;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.small-header {
+    font-size: $font-19;
+    font-weight: 400;
+    color: $color-grey-blog;
+    padding: 2rem 0;
+    @include mobile {
+        text-align: center;
+    }
+}
+
+.paragraph {
+    font-family: $font-open;
+    font-size: $font-14;
+    font-weight: 300;
+}
+
+.logo-small {
+    font-weight: 800;
+    font-size: $font-25;
+    padding-top: 1rem;
+}
+
+.logo-small-car {
+    font-weight: 900;
+    font-size: $font-25;
+}
+
+.logo__icon {
+    height: 1.9rem;
+    width: 1.6rem;
+}
